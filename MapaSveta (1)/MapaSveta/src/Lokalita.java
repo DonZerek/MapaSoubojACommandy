@@ -1,34 +1,34 @@
 import java.io.Serializable;
 
 /**
- * Lokalika v herním svìtì
+ * Lokalika v hernÃ­m svÃ¬tÃ¬
  * @author Alena Reichlova
  * @version 1.0
  */
 public class Lokalita implements Serializable{
 	/**
-	 * Název herní lokality
+	 * NÃ¡zev hernÃ­ lokality
 	 */
 	private String nazev;
 	/**
-	 * Èislo herní lokality, ádné dvì lokality ve høe nemají stejné èíslo 
-	 * Poznámka: pokud budete pouívat testovací soubor mapa.csv s mojí mapou, berete jako id lokality i hodnotu 0
-	 * -1 je pak vyhrazena pro neexistující lokalitu. Mùete samozøejmì volit jinı pøístup
+	 * Ãˆislo hernÃ­ lokality, Å¾Ã¡dnÃ© dvÃ¬ lokality ve hÃ¸e nemajÃ­ stejnÃ© Ã¨Ã­slo 
+	 * PoznÃ¡mka: pokud budete pouÅ¾Ã­vat testovacÃ­ soubor mapa.csv s mojÃ­ mapou, berete jako id lokality i hodnotu 0
+	 * -1 je pak vyhrazena pro neexistujÃ­cÃ­ lokalitu. MÃ¹Å¾ete samozÃ¸ejmÃ¬ volit jinÃ½ pÃ¸Ã­stup
 	 */
 	private int id;
 	/**
-	 * id sousední lokality, pokud bude id lokality -1, znamená to, e lokalita neexistuje a tímto smìrem se jít nedá
+	 * id sousednÃ­ lokality, pokud bude id lokality -1, znamenÃ¡ to, Å¾e lokalita neexistuje a tÃ­mto smÃ¬rem se jÃ­t nedÃ¡
 	 * 0 - Sever, 
-	 * 1 - Vıchod, 
+	 * 1 - VÃ½chod, 
 	 * 2 - Jih, 
-	 * 3 - Západ
+	 * 3 - ZÃ¡pad
 	 */
 	int[] smery = new int[4]; 
 	
 	/**
-	 * Konstruktor pro vytvoøení nové lokality
-	 * @param nazev název lokality
-	 * @param id identifikaèní èíslo lokality
+	 * Konstruktor pro vytvoÃ¸enÃ­ novÃ© lokality
+	 * @param nazev nÃ¡zev lokality
+	 * @param id identifikaÃ¨nÃ­ Ã¨Ã­slo lokality
 	 */
 	public Lokalita(String nazev, int id){
 		this.nazev = nazev;
@@ -36,8 +36,8 @@ public class Lokalita implements Serializable{
 	}
 	
 	/**
-	 * Metoda, která pøipojí lokalitu v zadaném svìtovém smìru
-	 * @param smer èíslo svìtové strany (0 - Sever, 1 - Vıchod, 2 - Jih, 3 - Západ)
+	 * Metoda, kterÃ¡ pÃ¸ipojÃ­ lokalitu v zadanÃ©m svÃ¬tovÃ©m smÃ¬ru
+	 * @param smer Ã¨Ã­slo svÃ¬tovÃ© strany (0 - Sever, 1 - VÃ½chod, 2 - Jih, 3 - ZÃ¡pad)
 	 * @param kam id lokality
 	 */
 	public void pripojLokalitu(int smer, int kam) {    
@@ -45,31 +45,31 @@ public class Lokalita implements Serializable{
 	}    
 	
 	/**
-	 * Metoda vrací název lokality
+	 * Metoda vracÃ­ nÃ¡zev lokality
 	 */
 	public String toString() {
 		return nazev;
 	}
 
 	/**
-	 * Metoda vrací id lokality
-	 * @return id lokality
+	 * Metoda vracÃ­ id lokality
+	 * @return id lokality rejbllllllllliiiiiiik
 	 */
 	public int getId() {
 		return id;
 	}
 
 	/**
-	 * Zmìna id lokality
-	 * @param id nové id lokality
+	 * ZmÃ¬na id lokality
+	 * @param id novÃ© id lokality
 	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 	
 	/**
-	 * Vrací id lokality v zadaném smìru 
-	 * @param smer èíslo svìtové strany (0 - Sever, 1 - Vıchod, 2 - Jih, 3 - Západ)
+	 * VracÃ­ id lokality v zadanÃ©m smÃ¬ru 
+	 * @param smer Ã¨Ã­slo svÃ¬tovÃ© strany (0 - Sever, 1 - VÃ½chod, 2 - Jih, 3 - ZÃ¡pad)
 	 * @return id lokality
 	 */
 	public int getSmer(int smer) { 
